@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Calculadora de BTUS</title>
+</head>
+
+<body>
+    <main id="App">
+        <h1 id="h1">Calculadora de BTUS</h1>
+        <div id="Container">
+            <span>Área do cômodo(m²)</span>
+            <br>
+            <input class="input" type="number" v-model="AreaComodo" class="form-control" aria-label="Default"
+                aria-describedby="inputGroup-sizing-default">
+            <br>
+            <span>Quantidade de pessoas no cômodo</span>
+            <br>
+            <input class="input" type="number" v-model="QntdPessoas" class="form-control" aria-label="Default"
+                aria-describedby="inputGroup-sizing-default">
+            <br>
+            <span>Quantidade de eletrônicos</span>
+            <br>
+            <input class="input" type="number" v-model="Dispositivos" class="form-control" aria-label="Default"
+                aria-describedby="inputGroup-sizing-default">
+            <br>
+            <button id="button" type="button" class="btn btn-warning" @click="calcular()">Calcular</button>
+
+            <p id="p">{{this.tela}}</p>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
